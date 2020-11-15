@@ -16,4 +16,4 @@ CREATE TABLE `mine_quack_stationcondition`  (
   `netspeed` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`day`, `panfu`) USING BTREE
 ) ENGINE = FEDERATED 
-CONNECTION='mysql://admin:admin@192.168.22.10:3306/ks/mine_quack_stationcondition';
+CONNECTION='mysql://yhy:071139@192.168.11.100:3306/ks/mine_quack_stationcondition';
