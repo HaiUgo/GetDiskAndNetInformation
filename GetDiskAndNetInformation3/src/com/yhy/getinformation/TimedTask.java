@@ -38,9 +38,10 @@ public class TimedTask implements Runnable{
 			System.out.println(tp.toString());
 			
 			DatabaseUtil.insert(str,true);
+			
 		}
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(10);
 			DatabaseUtil.close();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -56,7 +57,7 @@ public class TimedTask implements Runnable{
 				.newSingleThreadScheduledExecutor();
 
 		// parameters: the specified task, the first running delay, running period, time unit for period
-		service.scheduleAtFixedRate(task, 10, 20, TimeUnit.SECONDS); 
+		service.scheduleAtFixedRate(task, 0, 1, TimeUnit.MINUTES); 
 	}
 }
 

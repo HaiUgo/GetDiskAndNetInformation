@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.channels.FileChannel;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -152,78 +153,106 @@ public class GetStationInformation {
 		panfuList.add(X);
 		panfuList.add(Y);
 		panfuList.add(Z);
+		DecimalFormat df = new DecimalFormat("0.00000");
 		for(String panfu:panfuList) {
 			if(!map.containsKey(panfu)) {
 				if(panfu.equals(R)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(RNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[0][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[0][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[0][2]));
+					String x = df.format(HONGYANG_SENSORINFO[0][0]);
+					String y = df.format(HONGYANG_SENSORINFO[0][1]);
+					String z = df.format(HONGYANG_SENSORINFO[0][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(R, values);
 				}
 				if(panfu.equals(S)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(SNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[1][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[1][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[1][2]));
+					String x = df.format(HONGYANG_SENSORINFO[1][0]);
+					String y = df.format(HONGYANG_SENSORINFO[1][1]);
+					String z = df.format(HONGYANG_SENSORINFO[1][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(S, values);
 				}
 				if(panfu.equals(T)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(TNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[2][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[2][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[2][2]));
+					String x = df.format(HONGYANG_SENSORINFO[2][0]);
+					String y = df.format(HONGYANG_SENSORINFO[2][1]);
+					String z = df.format(HONGYANG_SENSORINFO[2][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(T, values);
 				}
 				if(panfu.equals(U)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(UNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[3][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[3][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[3][2]));
+					String x = df.format(HONGYANG_SENSORINFO[3][0]);
+					String y = df.format(HONGYANG_SENSORINFO[3][1]);
+					String z = df.format(HONGYANG_SENSORINFO[3][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(U, values);
 				}
 				if(panfu.equals(V)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(VNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[4][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[4][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[4][2]));
+					String x = df.format(HONGYANG_SENSORINFO[4][0]);
+					String y = df.format(HONGYANG_SENSORINFO[4][1]);
+					String z = df.format(HONGYANG_SENSORINFO[4][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(V, values);
 				}
 				if(panfu.equals(W)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(WNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[5][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[5][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[5][2]));
+					String x = df.format(HONGYANG_SENSORINFO[5][0]);
+					String y = df.format(HONGYANG_SENSORINFO[5][1]);
+					String z = df.format(HONGYANG_SENSORINFO[5][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(W, values);
 				}
 				if(panfu.equals(X)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(XNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[6][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[6][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[6][2]));
+					String x = df.format(HONGYANG_SENSORINFO[6][0]);
+					String y = df.format(HONGYANG_SENSORINFO[6][1]);
+					String z = df.format(HONGYANG_SENSORINFO[6][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(X, values);
 				}
 				if(panfu.equals(Y)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(YNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[7][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[7][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[7][2]));
+					String x = df.format(HONGYANG_SENSORINFO[7][0]);
+					String y = df.format(HONGYANG_SENSORINFO[7][1]);
+					String z = df.format(HONGYANG_SENSORINFO[7][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(Y, values);
 				}
 				if(panfu.equals(Z)) {
 					ArrayList<String> values = new ArrayList<String>();
 					values.add(ZNAME);
-					values.add(String.valueOf(HONGYANG_SENSORINFO[8][0]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[8][1]));
-					values.add(String.valueOf(HONGYANG_SENSORINFO[8][2]));
+					String x = df.format(HONGYANG_SENSORINFO[8][0]);
+					String y = df.format(HONGYANG_SENSORINFO[8][1]);
+					String z = df.format(HONGYANG_SENSORINFO[8][2]);
+					values.add(x);
+					values.add(y);
+					values.add(z);
 					map.put(Z, values);
 				}
 			}
